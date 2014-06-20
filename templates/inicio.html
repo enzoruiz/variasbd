@@ -1,0 +1,18 @@
+<html>
+<head>
+	<title>HOLA</title>
+</head>
+<body>
+	<div class="well">
+		<form role="form" method="POST">
+			{% csrf_token %}
+			<input type="text" name="username"><br>
+			<input type="password" name="password"><br>
+			<input type="submit" name="btnEntrar" value="Entrar">
+		</form>
+	</div>
+	{% for sucursal in sucursales %}
+		<h2>{{ sucursal }}</h2>
+	{% endfor %}
+</body>
+</html>
